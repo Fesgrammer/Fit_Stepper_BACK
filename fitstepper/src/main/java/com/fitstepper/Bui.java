@@ -17,4 +17,5 @@ public class Bui{
 
     public int getID(){
         return bui_id;
+    }
 }
