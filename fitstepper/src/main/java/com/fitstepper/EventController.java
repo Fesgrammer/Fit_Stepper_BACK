@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin
-public class Eventcontlloer {
+public class EventController {
 
     @Autowired
     private EventRepository repository;
