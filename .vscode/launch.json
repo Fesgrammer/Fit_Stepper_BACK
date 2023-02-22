@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-FitstepperApplication<fitstepper>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.fitstepper.FitstepperApplication",
+      "projectName": "fitstepper",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
