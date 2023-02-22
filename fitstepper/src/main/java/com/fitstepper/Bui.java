@@ -1,21 +1,31 @@
 package com.fitstepper;
 
-public class Bui{
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
-    private final String bui_name;
-    private final int bui_id;
+@Entity
+public class Bui {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int bui_id;
+    private String bui_name;
 
-    public Bui(String name,int id) {
-        super();
-        this.bui_name = name;
-        this.bui_id=id;
+    public int getBui_id() {
+        return bui_id;
     }
 
-    public String getname() {
+    public void setBui_id(int bui) {
+        this.bui_id = bui;
+    }
+
+    public String getBui_name() {
         return bui_name;
     }
 
-    public int getID(){
-        return bui_id;
+    public void setBui_name(String name) {
+        this.bui_name = name;
     }
+
 }

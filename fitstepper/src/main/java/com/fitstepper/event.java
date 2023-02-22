@@ -1,21 +1,31 @@
 package com.fitstepper;
 
-public class Event{
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
-    private final String event_name;
-    private final int event_id;
+@Entity
+public class Event {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
 
-    public Event(String name,int id) {
-        super();
-        this.event_name = name;
-        this.event_id=id;
+    private int event_id;
+    private String event_name;
+
+    public int getEvent_id() {
+        return event_id;
     }
 
-    public String getname() {
+    public void setEvent_id(int id) {
+        this.event_id = id;
+    }
+
+    public String getEvent_name() {
         return event_name;
     }
 
-    public int getID(){
-        return event_id;
+    public void setEvent_name(String name) {
+        this.event_name = name;
     }
 }
