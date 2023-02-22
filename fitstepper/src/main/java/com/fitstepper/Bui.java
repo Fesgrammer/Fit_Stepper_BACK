@@ -11,10 +11,10 @@ public class Bui{
         this.bui_id=id;
     }
 
-    public String getText() {
-        return text;
+    public String getname() {
+        return bui_name;
     }
 
     public int getID(){
-        return ID;
+        return bui_id;
 }
