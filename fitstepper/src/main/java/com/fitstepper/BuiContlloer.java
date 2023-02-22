@@ -11,18 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class BuiContlloer {
 
     @Autowired
-    private MoitonRepository repository;
+    private BuiRepository repository;
 
     @GetMapping(path = "/api/bui/getBuiList")
     public Iterable<Bui> getBuiList() {
         return repository.findAll();
     }
 
-    /*
-     * @GetMapping(path = "/api/motion/getEventList")
-     * public Iterable<Event> getEventList() {
-     * return repository.findAll();
-     * }
-     */
+  
 
 }
