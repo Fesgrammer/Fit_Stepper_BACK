@@ -1,7 +1,5 @@
 package com.fitstepper;
 
-import java.sql.Date;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,7 +15,7 @@ public class Motion {
     private int bui_id;
     private int event_id;
     private int amount;
-    private Date date;
+    private String date;
 
     public int getMotion_id() {
         return motion_id;
@@ -59,11 +57,11 @@ public class Motion {
         this.amount = amount;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 }
