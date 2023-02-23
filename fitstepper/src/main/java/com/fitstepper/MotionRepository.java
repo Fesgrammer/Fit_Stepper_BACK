@@ -8,4 +8,6 @@ public interface MotionRepository extends JpaRepository<Motion, String> {
     Boolean existsByUserId(int userId);
 
     List<Motion> findByUserId(int userId);
+
+    List<Motion> findByUserIdAndBuiId(int userId, int buiId);
 }
