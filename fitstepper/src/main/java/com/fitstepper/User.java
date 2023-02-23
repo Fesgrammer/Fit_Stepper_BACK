@@ -36,7 +36,7 @@ public class User {
         return user_id;
     }
 
-    public void setUserId(String user_id) {
+    public void setUserId(int user_id) {
         this.user_id = user_id;
     }
 
@@ -60,7 +60,7 @@ public class User {
         return jouwan2_level;
     }
 
-    public void setjouwan2_level(int jouawn2_level) {
+    public void setjouwan2_level(int jouwan2_level) {
         this.jouwan2_level = jouwan2_level;
     }
     
@@ -68,7 +68,7 @@ public class User {
         return jouwan2_amt;
     }
 
-    public void setjouwan2_amt(int jouawn2_amt) {
+    public void setjouwan2_amt(int jouwan2_amt) {
         this.jouwan2_amt = jouwan2_amt;
     }
     
@@ -76,7 +76,7 @@ public class User {
         return jouwan3_level;
     }
 
-    public void setjouwan3_level(int jouawn3_level) {
+    public void setjouwan3_level(int jouwan3_level) {
         this.jouwan3_level = jouwan3_level;
     }
 
@@ -85,7 +85,7 @@ public class User {
         return jouwan3_amt;
     }
 
-    public void setjouwan3_amt(int jouawn3_amt) {
+    public void setjouwan3_amt(int jouwan3_amt) {
         this.jouwan3_amt = jouwan3_amt;
     }
 
