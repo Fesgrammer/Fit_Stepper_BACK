@@ -6,30 +6,28 @@ public class UpdateUsrDataIn {
     private final int new_level;
     private final int total_amount;
 
-    public UpdateUsrDataIn(int user_id,int bui_id,int new_level,int total_amount){
+    public UpdateUsrDataIn(int user_id, int bui_id, int new_level, int total_amount) {
         super();
-        this.user_id=user_id;
-        this.bui_id=bui_id;
-        this.new_level=new_level;
-        this.total_amount=total_amount;
+        this.user_id = user_id;
+        this.bui_id = bui_id;
+        this.new_level = new_level;
+        this.total_amount = total_amount;
     }
 
-   private int getuserid(){
-    return user_id;
-   }
+    public int getUser_id() {
+        return user_id;
+    }
 
-   private int getbuiid(){
-    return bui_id;
-   }
+    public int getBui_id() {
+        return bui_id;
+    }
 
-   private int getnewlevel(){
-    return new_level;
-   }
+    public int getNew_level() {
+        return new_level;
+    }
 
-   private int gettotalamount(){
-    return total_amount;
-   }
-
-
+    public int getTotal_amount() {
+        return total_amount;
+    }
 
 }
