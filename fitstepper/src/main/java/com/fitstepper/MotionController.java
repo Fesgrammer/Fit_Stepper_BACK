@@ -28,6 +28,16 @@ public class MotionController {
         return "OK";
     }
 
+    @RequestMapping("/api/motion/exMsRec")
+    public String existsMotionRecord(@RequestParam("user_id") int userId) {
+        Boolean answer = repository.existsByUserId(userId);
+        if (answer) {
+            return "YES";
+        } else {
+            return "NO";
+        }
+    }
+
     @RequestMapping("/api/motion/getMsRec")
     public Iterable<Motion> getMotionRecord(@RequestParam("user_id") int userId) {
         return repository.findByUserId(userId);
