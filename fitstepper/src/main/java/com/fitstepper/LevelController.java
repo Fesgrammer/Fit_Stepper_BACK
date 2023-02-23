@@ -49,11 +49,16 @@ public class LevelController {
             GetNdMsAmtIn nmais = nmai.get(i);
             int now_amount = nmais.getNow_amount();
             int sub;
-            Level lv = repository.findByBuiIdAndLevel(nmais.getBui_id(), nmais.getNow_level() + 1);
-            sub = lv.getAmount() - now_amount;
-
-            GetNdMsAmtOut nmaos = new GetNdMsAmtOut(nmais.getBui_id(), sub);
-            nmao.add(nmaos);
+            if (repository.existsByBuiIdAndLevel(nmais.getBui_id(), nmais.getNow_level() + 1)) {
+                Level lv = repository.findByBuiIdAndLevel(nmais.getBui_id(), nmais.getNow_level() + 1);
+                sub = lv.getAmount() - now_amount;
+                GetNdMsAmtOut nmaos = new GetNdMsAmtOut(nmais.getBui_id(), sub);
+                nmao.add(nmaos);
+            } else {
+                // 次のレベルが登録されていない
+                GetNdMsAmtOut nmaos = new GetNdMsAmtOut(nmais.getBui_id(), -1);
+                nmao.add(nmaos);
+            }
         }
 
         return nmao;
