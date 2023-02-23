@@ -10,43 +10,43 @@ public class Motion {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private int motion_id;
-    private int user_id;
-    private int bui_id;
-    private int event_id;
+    private int motionId;
+    private int userId;
+    private int buiId;
+    private int eventId;
     private int amount;
     private String date;
 
-    public int getMotion_id() {
-        return motion_id;
+    public int getMotionId() {
+        return motionId;
     }
 
-    public void setMotion_id(int motion_id) {
-        this.motion_id = motion_id;
+    public void setMotionId(int motionId) {
+        this.motionId = motionId;
     }
 
-    public int getUser_id() {
-        return user_id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public int getBui_id() {
-        return bui_id;
+    public int getBuiId() {
+        return buiId;
     }
 
-    public void setBui_id(int bui_id) {
-        this.bui_id = bui_id;
+    public void setBuiId(int buiId) {
+        this.buiId = buiId;
     }
 
-    public int getEvent_id() {
-        return event_id;
+    public int getEventId() {
+        return eventId;
     }
 
-    public void setEvent_id(int event_id) {
-        this.event_id = event_id;
+    public void setEventId(int eventId) {
+        this.eventId = eventId;
     }
 
     public int getAmount() {
