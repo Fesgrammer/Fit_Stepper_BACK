@@ -36,7 +36,7 @@ public class User {
         return user_id;
     }
 
-    public void setUserId(String date) {
+    public void setUserId(String user_id) {
         this.user_id = user_id;
     }
 
@@ -44,7 +44,7 @@ public class User {
         return name;
     }
 
-    public void setname(String date) {
+    public void setname(String name) {
         this.name =name;
     }
 
@@ -52,7 +52,7 @@ public class User {
         return pass;
     }
 
-    public void setpass(String date) {
+    public void setpass(int pass) {
         this.pass = pass;
     }
 
@@ -60,7 +60,7 @@ public class User {
         return jouwan2_level;
     }
 
-    public void setjouwan2_level(String date) {
+    public void setjouwan2_level(int jouawn2_level) {
         this.jouwan2_level = jouwan2_level;
     }
     
@@ -68,7 +68,7 @@ public class User {
         return jouwan2_amt;
     }
 
-    public void setjouwan2_amt(String date) {
+    public void setjouwan2_amt(int jouawn2_amt) {
         this.jouwan2_amt = jouwan2_amt;
     }
     
@@ -76,7 +76,7 @@ public class User {
         return jouwan3_level;
     }
 
-    public void setjouwan3_level(String date) {
+    public void setjouwan3_level(int jouawn3_level) {
         this.jouwan3_level = jouwan3_level;
     }
 
@@ -85,7 +85,7 @@ public class User {
         return jouwan3_amt;
     }
 
-    public void setjouwan3_amt(String date) {
+    public void setjouwan3_amt(int jouawn3_amt) {
         this.jouwan3_amt = jouwan3_amt;
     }
 
@@ -93,7 +93,7 @@ public class User {
         return chest_level;
     }
 
-    public void setchestlevel(String date) {
+    public void setchestlevel(int chest_level) {
         this.chest_level = chest_level;
     }
 
@@ -101,15 +101,31 @@ public class User {
         return chest_amt;
     }
 
-    public void setchestamt(String date) {
+    public void setchestamt(int chest_amt) {
         this.chest_amt = chest_amt;
+    }
+
+    public int getadslevel() {//chest
+        return ads_level;
+    }
+
+    public void setadslevel(int ads_level) {
+        this.ads_level = ads_level;
+    }
+
+    public int getadsamt() {
+        return ads_amt;
+    }
+
+    public void setadsamt(int ads_amt) {
+        this.ads_amt = ads_amt;
     }
 
     public int getshoulderlevel() {//shouder
         return shoulder_level;
     }
 
-    public void setshoulderlevel(String date) {
+    public void setshoulderlevel(int shoulder_level) {
         this.shoulder_level = shoulder_level;
     }
 
@@ -117,7 +133,7 @@ public class User {
         return shoulder_amt;
     }
 
-    public void setshoulderamt(String date) {
+    public void setshoulderamt(int shoulder_amt) {
         this.shoulder_amt = shoulder_amt;
     }
 
@@ -125,15 +141,15 @@ public class User {
         return back_level;
     }
 
-    public void setbacklevel(String date) {
+    public void setbacklevel(int back_level) {
         this.back_level = back_level;
     }
 
     public int getbackamt() {
-        return back_level;
+        return back_amt;
     }
 
-    public void setbackamt(String date) {
+    public void setbackamt(int back_amt) {
         this.back_amt= back_amt;
     }
 
@@ -142,7 +158,7 @@ public class User {
         return hip_level;
     }
 
-    public void sethiplevel(String date) {
+    public void sethiplevel(int hip_level) {
         this.hip_level = hip_level;
     }
 
@@ -150,7 +166,7 @@ public class User {
         return hip_amt;
     }
 
-    public void sethipamt(String date) {
+    public void sethipamt(int hip_amt) {
         this.hip_amt = hip_amt;
     }
 
@@ -158,7 +174,7 @@ public class User {
         return thigh_level;
     }
 
-    public void setthighlevel(String date) {
+    public void setthighlevel(int thigh_level) {
         this.thigh_level = thigh_level;
     }
 
@@ -167,7 +183,7 @@ public class User {
         return thigh_amt;
     }
 
-    public void setthighamt(String date) {
+    public void setthighamt(int thigh_amt) {
         this.thigh_amt = thigh_amt;
     }
 
@@ -175,7 +191,7 @@ public class User {
         return calf_level;
     }
 
-    public void setcalflevel(String date) {
+    public void setcalflevel(int calf_level) {
         this.calf_level = calf_level;
     }
 
@@ -183,7 +199,7 @@ public class User {
         return calf_amt;
     }
 
-    public void setcalfatm(String date) {
+    public void setcalfatm(int calf_amt) {
         this.calf_amt = calf_amt;
     }
 
