@@ -6,7 +6,7 @@ public class UpdateUsrDataIn {
     private final int new_level;
     private final int total_amount;
 
-    public UpdateUsrDataIn(int user_id,int bui_id,int new_level,int total_amountb){
+    public UpdateUsrDataIn(int user_id,int bui_id,int new_level,int total_amount){
         super();
         this.user_id=user_id;
         this.bui_id=bui_id;
