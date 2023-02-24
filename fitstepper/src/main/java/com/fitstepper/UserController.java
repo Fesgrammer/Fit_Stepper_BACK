@@ -57,6 +57,30 @@ public class UserController {
                 return "OK";
         }
 
+        @RequestMapping(value = "api/user/login", method = { RequestMethod.POST })
+        public String login(@RequestBody LoginInput lgi) throws NoSuchAlgorithmException {
+
+                // 存在するユーザかどうか確かめる
+                if (!repository.existsByName(lgi.getName())) {
+                        return "NG";
+                }
+
+                User usr = repository.findByName(lgi.getName());
+
+                // パスワードをハッシュ化
+                String passRow = lgi.getPass_pow();
+                // SHA-256
+                MessageDigest sha256 = MessageDigest.getInstance("SHA-256");
+                byte[] sha256Result = sha256.digest(passRow.getBytes());
+                String hashPassInput = String.format("%040x", new BigInteger(1, sha256Result));
+
+                if (hashPassInput.equals(usr.getPass())) {
+                        return "OK";
+                } else {
+                        return "NG";
+                }
+        }
+
         @RequestMapping("api/user/getLevel") // 実装できるかわからなそう？
         public int getuserlevel(@RequestParam("user_id") int userId) {
 
