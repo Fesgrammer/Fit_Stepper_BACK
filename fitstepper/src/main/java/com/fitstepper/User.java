@@ -10,197 +10,194 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private int user_id;
+    private int userId;
     private String name;
-    private int pass;
-    private int jouwan2_level;
-    private int jouwan2_amt;
-    private int jouwan3_level;
-    private int jouwan3_amt;
-    private int chest_level;
-    private int chest_amt;
-    private int ads_level;
-    private int ads_amt;
-    private int shoulder_level;
-    private int shoulder_amt;
-    private int back_level;
-    private int back_amt;
-    private int hip_level;
-    private int hip_amt;
-    private int thigh_level;
-    private int thigh_amt;
-    private int calf_level;
-    private int calf_amt;
-    
-    public int getuserid() {//userID
-        return user_id;
+    private String pass;
+    private int jouwan2Level;
+    private int jouwan2Amt;
+    private int jouwan3Level;
+    private int jouwan3Amt;
+    private int chestLevel;
+    private int chestAmt;
+    private int adsLevel;
+    private int adsAmt;
+    private int shoulderLevel;
+    private int shoulderAmt;
+    private int backLevel;
+    private int backAmt;
+    private int hipLevel;
+    private int hipAmt;
+    private int thighLevel;
+    private int thighAmt;
+    private int calfLevel;
+    private int calfAmt;
+
+    public int getuserId() {// userID
+        return userId;
     }
 
-    public void setUserId(int user_id) {
-        this.user_id = user_id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public String getname() {//name
+    public String getName() {// name
         return name;
     }
 
-    public void setname(String name) {
-        this.name =name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getpass() {//pass
+    public String getPass() {// pass
         return pass;
     }
 
-    public void setpass(int pass) {
+    public void setPass(String pass) {
         this.pass = pass;
     }
 
-    public int getjouwan2_level() {//jouwan2
-        return jouwan2_level;
+    public int getJouwan2Level() {// jouwan2
+        return jouwan2Level;
     }
 
-    public void setjouwan2_level(int jouwan2_level) {
-        this.jouwan2_level = jouwan2_level;
-    }
-    
-    public int getjouwan2_amt() {
-        return jouwan2_amt;
+    public void setJouwan2Level(int jouwan2Level) {
+        this.jouwan2Level = jouwan2Level;
     }
 
-    public void setjouwan2_amt(int jouwan2_amt) {
-        this.jouwan2_amt = jouwan2_amt;
-    }
-    
-    public int getjouwan3_level() {//jouwan3
-        return jouwan3_level;
+    public int getJouwan2Amt() {
+        return jouwan2Amt;
     }
 
-    public void setjouwan3_level(int jouwan3_level) {
-        this.jouwan3_level = jouwan3_level;
+    public void setJouwan2Amt(int jouwan2Amt) {
+        this.jouwan2Amt = jouwan2Amt;
     }
 
-
-    public int getjouwan3_amt() {
-        return jouwan3_amt;
+    public int getJouwan3Level() {// jouwan3
+        return jouwan3Level;
     }
 
-    public void setjouwan3_amt(int jouwan3_amt) {
-        this.jouwan3_amt = jouwan3_amt;
+    public void setJouwan3Level(int jouwan3Level) {
+        this.jouwan3Level = jouwan3Level;
     }
 
-    public int getchestlevel() {//chest
-        return chest_level;
+    public int getJouwan3Amt() {
+        return jouwan3Amt;
     }
 
-    public void setchestlevel(int chest_level) {
-        this.chest_level = chest_level;
+    public void setJouwan3Amt(int jouwan3Amt) {
+        this.jouwan3Amt = jouwan3Amt;
     }
 
-    public int getchestamt() {
-        return chest_amt;
+    public int getChestLevel() {// chest
+        return chestLevel;
     }
 
-    public void setchestamt(int chest_amt) {
-        this.chest_amt = chest_amt;
+    public void setChestLevel(int chestLevel) {
+        this.chestLevel = chestLevel;
     }
 
-    public int getadslevel() {//chest
-        return ads_level;
+    public int getChestAmt() {
+        return chestAmt;
     }
 
-    public void setadslevel(int ads_level) {
-        this.ads_level = ads_level;
+    public void setChestAmt(int chestAmt) {
+        this.chestAmt = chestAmt;
     }
 
-    public int getadsamt() {
-        return ads_amt;
+    public int getAdsLevel() {// chest
+        return adsLevel;
     }
 
-    public void setadsamt(int ads_amt) {
-        this.ads_amt = ads_amt;
+    public void setAdsLevel(int adsLevel) {
+        this.adsLevel = adsLevel;
     }
 
-    public int getshoulderlevel() {//shouder
-        return shoulder_level;
+    public int getAdsAmt() {
+        return adsAmt;
     }
 
-    public void setshoulderlevel(int shoulder_level) {
-        this.shoulder_level = shoulder_level;
+    public void setAdsAmt(int adsAmt) {
+        this.adsAmt = adsAmt;
     }
 
-    public int getshoulderamt() {
-        return shoulder_amt;
+    public int getShoulderLevel() {// shouder
+        return shoulderLevel;
     }
 
-    public void setshoulderamt(int shoulder_amt) {
-        this.shoulder_amt = shoulder_amt;
+    public void setShoulderLevel(int shoulderLevel) {
+        this.shoulderLevel = shoulderLevel;
     }
 
-    public int getbacklevel() {//back
-        return back_level;
+    public int getShoulderAmt() {
+        return shoulderAmt;
     }
 
-    public void setbacklevel(int back_level) {
-        this.back_level = back_level;
+    public void setShoulderAmt(int shoulderAmt) {
+        this.shoulderAmt = shoulderAmt;
     }
 
-    public int getbackamt() {
-        return back_amt;
+    public int getBackLevel() {// back
+        return backLevel;
     }
 
-    public void setbackamt(int back_amt) {
-        this.back_amt= back_amt;
+    public void setBackLevel(int backLevel) {
+        this.backLevel = backLevel;
     }
 
-    
-    public int gethiplevel() {//hip
-        return hip_level;
+    public int getBackAmt() {
+        return backAmt;
     }
 
-    public void sethiplevel(int hip_level) {
-        this.hip_level = hip_level;
+    public void setBackAmt(int backAmt) {
+        this.backAmt = backAmt;
     }
 
-    public int gethipamt() {
-        return hip_amt;
+    public int getHipLevel() {// hip
+        return hipLevel;
     }
 
-    public void sethipamt(int hip_amt) {
-        this.hip_amt = hip_amt;
+    public void setHipLevel(int hipLevel) {
+        this.hipLevel = hipLevel;
     }
 
-    public int getthighlevel() {//thigh
-        return thigh_level;
+    public int getHipAmt() {
+        return hipAmt;
     }
 
-    public void setthighlevel(int thigh_level) {
-        this.thigh_level = thigh_level;
+    public void setHipAmt(int hipAmt) {
+        this.hipAmt = hipAmt;
     }
 
-    
-    public int getthighamt() {
-        return thigh_amt;
+    public int getThighLevel() {// thigh
+        return thighLevel;
     }
 
-    public void setthighamt(int thigh_amt) {
-        this.thigh_amt = thigh_amt;
+    public void setThighLevel(int thighLevel) {
+        this.thighLevel = thighLevel;
     }
 
-   public int getcalflevel() {//calf
-        return calf_level;
+    public int getThighAmt() {
+        return thighAmt;
     }
 
-    public void setcalflevel(int calf_level) {
-        this.calf_level = calf_level;
+    public void setThighAmt(int thighAmt) {
+        this.thighAmt = thighAmt;
     }
 
-    public int getcalfamt() {
-        return calf_amt;
+    public int getCalfLevel() {// calf
+        return calfLevel;
     }
 
-    public void setcalfatm(int calf_amt) {
-        this.calf_amt = calf_amt;
+    public void setCalfLevel(int calfLevel) {
+        this.calfLevel = calfLevel;
+    }
+
+    public int getCalfAmt() {
+        return calfAmt;
+    }
+
+    public void setCalfAmt(int calfAmt) {
+        this.calfAmt = calfAmt;
     }
 
 }
