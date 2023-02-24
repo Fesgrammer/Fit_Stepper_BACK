@@ -52,11 +52,13 @@ public class LevelController {
             if (repository.existsByBuiIdAndLevel(nmais.getBui_id(), nmais.getNow_level() + 1)) {
                 Level lv = repository.findByBuiIdAndLevel(nmais.getBui_id(), nmais.getNow_level() + 1);
                 sub = lv.getAmount() - now_amount;
-                GetNdMsAmtOut nmaos = new GetNdMsAmtOut(nmais.getBui_id(), sub);
+                GetNdMsAmtOut nmaos = new GetNdMsAmtOut(nmais.getBui_id(), nmais.getBui_name(),
+                        nmais.getNow_level() + 1, sub);
                 nmao.add(nmaos);
             } else {
                 // 次のレベルが登録されていない
-                GetNdMsAmtOut nmaos = new GetNdMsAmtOut(nmais.getBui_id(), -1);
+                GetNdMsAmtOut nmaos = new GetNdMsAmtOut(nmais.getBui_id(), nmais.getBui_name(),
+                        nmais.getNow_level() + 1, -1);
                 nmao.add(nmaos);
             }
         }
