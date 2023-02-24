@@ -13,10 +13,10 @@ public class User {
     private int userId;
     private String name;
     private String pass;
-    private int jouwan2Level;
-    private int jouwan2Amt;
-    private int jouwan3Level;
-    private int jouwan3Amt;
+    private int jouwanTwoLevel;
+    private int jouwanTwoAmt;
+    private int jouwanThLevel;
+    private int jouwanThAmt;
     private int chestLevel;
     private int chestAmt;
     private int adsLevel;
@@ -56,36 +56,36 @@ public class User {
         this.pass = pass;
     }
 
-    public int getJouwan2Level() {// jouwan2
-        return jouwan2Level;
+    public int getJouwanTwoLevel() {// jouwanTwo
+        return jouwanTwoLevel;
     }
 
-    public void setJouwan2Level(int jouwan2Level) {
-        this.jouwan2Level = jouwan2Level;
+    public void setJouwanTwoLevel(int jouwanTwoLevel) {
+        this.jouwanTwoLevel = jouwanTwoLevel;
     }
 
-    public int getJouwan2Amt() {
-        return jouwan2Amt;
+    public int getJouwanTwoAmt() {
+        return jouwanTwoAmt;
     }
 
-    public void setJouwan2Amt(int jouwan2Amt) {
-        this.jouwan2Amt = jouwan2Amt;
+    public void setJouwanTwoAmt(int jouwanTwoAmt) {
+        this.jouwanTwoAmt = jouwanTwoAmt;
     }
 
-    public int getJouwan3Level() {// jouwan3
-        return jouwan3Level;
+    public int getJouwanThLevel() {// jouwanTh
+        return jouwanThLevel;
     }
 
-    public void setJouwan3Level(int jouwan3Level) {
-        this.jouwan3Level = jouwan3Level;
+    public void setJouwanThLevel(int jouwanThLevel) {
+        this.jouwanThLevel = jouwanThLevel;
     }
 
-    public int getJouwan3Amt() {
-        return jouwan3Amt;
+    public int getJouwanThAmt() {
+        return jouwanThAmt;
     }
 
-    public void setJouwan3Amt(int jouwan3Amt) {
-        this.jouwan3Amt = jouwan3Amt;
+    public void setJouwanThAmt(int jouwanThAmt) {
+        this.jouwanThAmt = jouwanThAmt;
     }
 
     public int getChestLevel() {// chest

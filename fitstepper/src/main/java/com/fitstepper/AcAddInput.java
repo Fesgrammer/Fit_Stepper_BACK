@@ -1,10 +1,10 @@
 package com.fitstepper;
 
-public class LoginInput {
+public class AcAddInput {
     private final String name;
     private final String pass_row;
 
-    public LoginInput(String name, String pass_row) {
+    public AcAddInput(String name, String pass_row) {
         super();
         this.name = name;
         this.pass_row = pass_row;
