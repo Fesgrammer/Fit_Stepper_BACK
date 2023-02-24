@@ -34,7 +34,7 @@ public class UserController {
 
         @RequestMapping(value = "api/user/updateData", method = { RequestMethod.POST })
         public String updateData(@RequestBody UpdateUsrDataIn uddi) {
-                User usrBefore = repository.findById(uddi.getUser_id());
+                User usrBefore = repository.findByUserId(uddi.getUser_id());
                 User usr = new User();
 
                 usr = usrBefore;
@@ -42,69 +42,69 @@ public class UserController {
 
                 switch (uddi.getBui_id()) {
                         case 1:
-                                if (usrBefore.getJouwan2_level() < uddi.getNew_level()) {
-                                        usr.setJouwan2_level(uddi.getNew_level());
+                                if (usrBefore.getJouwan2Level() < uddi.getNew_level()) {
+                                        usr.setJouwan2Level(uddi.getNew_level());
                                         updateFlag = true;
                                 }
-                                usr.setJouwan2_amt(uddi.getTotal_amount());
+                                usr.setJouwan2Amt(uddi.getTotal_amount());
                                 break;
                         case 2:
-                                if (usrBefore.getJouwan3_level() < uddi.getNew_level()) {
-                                        usr.setJouwan3_level(uddi.getNew_level());
+                                if (usrBefore.getJouwan3Level() < uddi.getNew_level()) {
+                                        usr.setJouwan3Level(uddi.getNew_level());
                                         updateFlag = true;
                                 }
-                                usr.setJouwan3_amt(uddi.getTotal_amount());
+                                usr.setJouwan3Amt(uddi.getTotal_amount());
                                 break;
                         case 3:
-                                if (usrBefore.getChest_level() < uddi.getNew_level()) {
-                                        usr.setChest_level(uddi.getNew_level());
+                                if (usrBefore.getChestLevel() < uddi.getNew_level()) {
+                                        usr.setChestLevel(uddi.getNew_level());
                                         updateFlag = true;
                                 }
-                                usr.setChest_amt(uddi.getTotal_amount());
+                                usr.setChestAmt(uddi.getTotal_amount());
                                 break;
                         case 4:
-                                if (usrBefore.getAds_level() < uddi.getNew_level()) {
-                                        usr.setAds_level(uddi.getNew_level());
+                                if (usrBefore.getAdsLevel() < uddi.getNew_level()) {
+                                        usr.setAdsLevel(uddi.getNew_level());
                                         ;
                                         updateFlag = true;
                                 }
-                                usr.setAds_amt(uddi.getTotal_amount());
+                                usr.setAdsAmt(uddi.getTotal_amount());
                                 break;
                         case 5:
-                                if (usrBefore.getShoulder_level() < uddi.getNew_level()) {
-                                        usr.setShoulder_level(uddi.getNew_level());
+                                if (usrBefore.getShoulderLevel() < uddi.getNew_level()) {
+                                        usr.setShoulderLevel(uddi.getNew_level());
                                         ;
                                         updateFlag = true;
                                 }
-                                usr.setShoulder_amt(uddi.getTotal_amount());
+                                usr.setShoulderAmt(uddi.getTotal_amount());
                                 break;
                         case 6:
-                                if (usrBefore.getBack_level() < uddi.getNew_level()) {
-                                        usr.setBack_level(uddi.getNew_level());
+                                if (usrBefore.getBackLevel() < uddi.getNew_level()) {
+                                        usr.setBackLevel(uddi.getNew_level());
                                         updateFlag = true;
                                 }
-                                usr.setBack_amt(uddi.getTotal_amount());
+                                usr.setBackAmt(uddi.getTotal_amount());
                                 break;
                         case 7:
-                                if (usrBefore.getHip_level() < uddi.getNew_level()) {
-                                        usr.setHip_level(uddi.getNew_level());
+                                if (usrBefore.getHipLevel() < uddi.getNew_level()) {
+                                        usr.setHipLevel(uddi.getNew_level());
                                         updateFlag = true;
                                 }
-                                usr.setHip_amt(uddi.getTotal_amount());
+                                usr.setHipAmt(uddi.getTotal_amount());
                                 break;
                         case 8:
-                                if (usrBefore.getThigh_level() < uddi.getNew_level()) {
-                                        usr.setThigh_level(uddi.getNew_level());
+                                if (usrBefore.getThighLevel() < uddi.getNew_level()) {
+                                        usr.setThighLevel(uddi.getNew_level());
                                         updateFlag = true;
                                 }
-                                usr.setThigh_amt(uddi.getTotal_amount());
+                                usr.setThighAmt(uddi.getTotal_amount());
                                 break;
                         case 9:
-                                if (usrBefore.getCalf_level() < uddi.getNew_level()) {
-                                        usr.setCalf_level(uddi.getNew_level());
+                                if (usrBefore.getCalfLevel() < uddi.getNew_level()) {
+                                        usr.setCalfLevel(uddi.getNew_level());
                                         updateFlag = true;
                                 }
-                                usr.setCalf_amt(uddi.getTotal_amount());
+                                usr.setCalfAmt(uddi.getTotal_amount());
                                 break;
 
                 }
