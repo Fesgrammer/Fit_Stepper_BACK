@@ -81,10 +81,16 @@ public class UserController {
                 }
         }
 
-        @RequestMapping("api/user/getLevel") // 実装できるかわからなそう？
-        public int getuserlevel(@RequestParam("user_id") int userId) {
-
-                return 1;
+        @RequestMapping("api/user/getUserData") // 実装できるかわからなそう？
+        public UserDataOut getUserData(@RequestParam("user_id") int userId) {
+                User usr = repository.findByUserId(userId);
+                UserDataOut udo = new UserDataOut(usr.getuserId(), usr.getName(), usr.getJouwanTwoLevel(),
+                                usr.getJouwanThAmt(), usr.getJouwanThLevel(), usr.getJouwanThAmt(), usr.getCalfLevel(),
+                                usr.getChestAmt(), usr.getAdsLevel(), usr.getAdsAmt(), usr.getShoulderLevel(),
+                                usr.getShoulderAmt(), usr.getBackLevel(), usr.getBackAmt(), usr.getHipLevel(),
+                                usr.getHipAmt(), usr.getThighLevel(), usr.getThighAmt(), usr.getCalfLevel(),
+                                usr.getCalfAmt());
+                return udo;
         }
 
         @RequestMapping(value = "api/user/updateData", method = { RequestMethod.POST })
