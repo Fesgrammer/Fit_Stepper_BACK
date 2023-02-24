@@ -1,5 +1,9 @@
 package com.fitstepper;
 
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,16 +18,43 @@ public class UserController {
         @Autowired
         private UserRepository repository;
 
-        @RequestMapping("api/user/login")
-        public String login(@RequestParam("user_id") int userId) {
+        @RequestMapping(value = "api/user/add", method = { RequestMethod.POST })
+        public String add(@RequestBody AcAddInput aai) throws NoSuchAlgorithmException {
+                User usr = new User();
+                // すでに該当するユーザ名が登録されている場合はAlreadyを返す
+                if (repository.existsByName(aai.getName())) {
+                        return "Already";
+                }
 
-                return "YES";
-        }
+                // パスワードをハッシュ化
+                String passRow = aai.getPass_pow();
+                // SHA-256
+                MessageDigest sha256 = MessageDigest.getInstance("SHA-256");
+                byte[] sha256Result = sha256.digest(passRow.getBytes());
+                usr.setUserId(0);
+                usr.setName(aai.getName());
+                usr.setPass(String.format("%040x", new BigInteger(1, sha256Result)));
+                usr.setJouwanTwoLevel(0);
+                usr.setJouwanTwoAmt(0);
+                usr.setJouwanThLevel(0);
+                usr.setJouwanThAmt(0);
+                usr.setChestLevel(0);
+                usr.setCalfAmt(0);
+                usr.setAdsLevel(0);
+                usr.setAdsAmt(0);
+                usr.setShoulderLevel(0);
+                usr.setShoulderAmt(0);
+                usr.setBackLevel(0);
+                usr.setBackAmt(0);
+                usr.setHipLevel(0);
+                usr.setHipAmt(0);
+                usr.setThighLevel(0);
+                usr.setThighAmt(0);
+                usr.setCalfLevel(0);
+                usr.setCalfAmt(0);
 
-        @RequestMapping("api/user/add")
-        public String add(@RequestParam("user_id") int userId) {
-
-                return "YES";
+                repository.save(usr);
+                return "OK";
         }
 
         @RequestMapping("api/user/getLevel") // 実装できるかわからなそう？
@@ -42,18 +73,18 @@ public class UserController {
 
                 switch (uddi.getBui_id()) {
                         case 1:
-                                if (usrBefore.getJouwan2Level() < uddi.getNew_level()) {
-                                        usr.setJouwan2Level(uddi.getNew_level());
+                                if (usrBefore.getJouwanTwoLevel() < uddi.getNew_level()) {
+                                        usr.setJouwanTwoLevel(uddi.getNew_level());
                                         updateFlag = true;
                                 }
-                                usr.setJouwan2Amt(uddi.getTotal_amount());
+                                usr.setJouwanTwoAmt(uddi.getTotal_amount());
                                 break;
                         case 2:
-                                if (usrBefore.getJouwan3Level() < uddi.getNew_level()) {
-                                        usr.setJouwan3Level(uddi.getNew_level());
+                                if (usrBefore.getJouwanThLevel() < uddi.getNew_level()) {
+                                        usr.setJouwanThLevel(uddi.getNew_level());
                                         updateFlag = true;
                                 }
-                                usr.setJouwan3Amt(uddi.getTotal_amount());
+                                usr.setJouwanThAmt(uddi.getTotal_amount());
                                 break;
                         case 3:
                                 if (usrBefore.getChestLevel() < uddi.getNew_level()) {
